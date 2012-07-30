@@ -39,13 +39,10 @@ body {
 	padding:$picMargin 0;
 	overflow:hidden;
 	.logo {
-		//background:url($logo) no-repeat;
 		background:url(img/logob.png) no-repeat;
 		width:100px;
 		height:30px;
 		margin:auto;
-		//width:201px;
-		//height:38px;
 		text-indent:-9999px;
 		float:left;
 		@include animation(fadeInDown);
@@ -81,10 +78,8 @@ body {
 }
 
 .pics {
-	overflow:hidden;
 	ul {
 		@include animation(fadeInUp 1s ease-in);
-		overflow:hidden;
 		li {
 			-webkit-transform: rotate3d(0,0,0,0);
 			width:$picWidth;
@@ -101,7 +96,6 @@ body {
 			}
 			&.bounceIn {
 				@include animation-name(bounceIn);
-				//@include animation-name(fadeInDown);
 			}
 			&:nth-child(3n+3) {
 				padding-right:0;
@@ -113,7 +107,6 @@ body {
 					width:$picWidth;
 					height:$picWidth;
 					border-radius:1px;
-					//-webkit-box-shadow:inset 0px 0px 85px rgba(255,255,255,.5);
 					position:relative;
 					top:0;
 					left:0;
@@ -121,7 +114,6 @@ body {
 					@include transition(all .3s ease-in-out);
 					+ a {
 						box-shadow:inset 0px 1px 0px rgba(255,255,255,.5);
-					    //-webkit-box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
 					    position: absolute; 
 					    width: $picWidth;
 					    height: $picWidth;
@@ -148,6 +140,7 @@ body {
 		left:0;
 		height:$dropHeight - 20px;
 		padding:10px 0;
+		width: $picWidth;
 		img {
 			height:25px;
 			border-radius:3px;
@@ -162,17 +155,40 @@ body {
 			padding:4px 0 0 5px;
 
 		}
+		.like {
+			width:25px;
+			height:24px;
+			background:url(img/heart.png) center top no-repeat;
+			float:right;
+			display:inline-block;
+			cursor:pointer;
+			&:hover {
+				background:url(img/heart.png) center bottom no-repeat;
+			}	
+		}
+		.heartAni {
+			width:25px;
+			height:24px;
+			background-image:url(img/heartLrg.png);
+			background-repeat:no-repeat;
+			background-size:100%;
+			position:absolute;
+			// for when Chrome supports animates on after classes 
+			//
+			//@include animation(fadeOut);
+			//-webkit-animation-duration:2s;
+			//-webkit-animation-fill-mode:both;
+		}
 	}
 }
 
 .footer {
 	width:100%;
 	overflow:hidden;
-	@include animation(fadeInUp 1s ease-in);
+	@include animation(fadeInUp 1.5s ease-in);
 	.more {
 		border: 1px solid lighten($bg, 3%);
 		font-weight:700;
-		//text-shadow: 0 1px 1px white;
 		font-size: 12px;
 		padding: 7px 10px;
 		white-space: nowrap;
@@ -183,7 +199,7 @@ body {
 		border-radius:3px;
 		border: 1px solid lighten($bg, 5%);
 		@include box-shadow(0 1px 0 lighten($bg, 10%));
-		@include transition(all .25s ease-in-out);
+		//@include transition(all .15s ease-in-out);
 		display: block;
 		position:absolute;
 		left:50%;
@@ -206,7 +222,7 @@ body {
 		float:right;
 		opacity:.2;
 		background-size:100%;
-		@include transition(all .25s ease-in-out);
+		@include transition(all .25s 4ms both ease-in-out);
 		&:hover {
 			opacity:.5;
 		}

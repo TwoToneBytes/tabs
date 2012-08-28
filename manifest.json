@@ -1,0 +1,24 @@
+{
+  "name": "Tabstagram",
+  "version": "0.5",
+  "manifest_version": 2,
+  "description": "blah blah blah",
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://api.instagram.com/"],
+      "js": ["js/lib/chrome_ex_oauthsimple.js", "js/lib/chrome_ex_oauth.js", "background.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["js/lib/chrome_ex_oauthsimple.js", "js/lib/chrome_ex_oauth.js", "background.js"]
+  },
+  "permissions": [
+    "https://api.instagram.com/oauth/authorize/",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' https://api.instagram.com/; object-src 'self'"
+}

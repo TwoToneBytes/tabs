@@ -26,8 +26,8 @@
             </div>    
         </div><!-- End .head -->   
         <div class="pics">
-            <ul class="picsList">
-                <li class="animate fadeInUp" style="-webkit-animation-delay: 0ms;">
+            <ul id="picsList">
+                <!--<li class="animate fadeInUp" style="-webkit-animation-delay: 0ms;">
                     <div class="user">
                         <img src="http://distilleryimage2.s3.amazonaws.com/14f85d14d94211e1840e1231381069cc_6.jpg" />
                         <span class="name">Mike</span>
@@ -92,30 +92,20 @@
                         <img class="shot" src="http://distilleryimage6.s3.amazonaws.com/5849f322d94511e18a5b22000a1cbb38_6.jpg"/>
                         <a href="+"></a> 
                     </div>    
-                </li>
+                </li>-->
             </ul>    
         </div><!-- End .pics -->
         <div class="footer">
-            <a href="#" class="more">Load More</a>
+            <a href="pop.html" class="more">Load More</a>
             <a href="#" class="settings">Settings</a>
         </div> 
     </div><!-- End .wrap -->    
     
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
-
-    <!-- scripts concatenated and minified via build script -->
+    <!-- Get js -->
+    <script src="js/lib/jquery-1.8.0.js"></script>
+    
+    <script type="text/javascript" src="js/lib/chrome_ex_oauthsimple.js"></script>
+    <script type="text/javascript" src="js/lib/chrome_ex_oauth.js"></script>
     <script src="js/app.js"></script>
-    <!-- end scripts -->
-
-    <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-         mathiasbynens.be/notes/async-analytics-snippet -->
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
 </body>
 </html>

@@ -63,6 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* =====================
+variables
+======================*/
 /*----------------------
 Partials
 ----------------------*/
@@ -6812,9 +6815,260 @@ Partials
   }
 }
 
-/* =====================
-variables
-======================*/
+/* line 1, ../sass/partials/_flipper.scss */
+.item {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  background: #0f1b1f;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 1px 1px black;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 1px 1px black;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 1px 1px black;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  float: left;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+/* line 21, ../sass/partials/_flipper.scss */
+.item:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+/* line 25, ../sass/partials/_flipper.scss */
+.item .image {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 250px;
+  height: 250px;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+}
+
+/* line 37, ../sass/partials/_flipper.scss */
+.item .image .placeholder,
+.item .image .underlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 250px;
+  height: 250px;
+  background: #372f2b;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.23), inset 0 0 2px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.23), inset 0 0 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.23), inset 0 0 2px rgba(255, 255, 255, 0.2);
+  background-size: 100% !important;
+}
+
+/* line 54, ../sass/partials/_flipper.scss */
+.fallback .item .image .placeholder,
+.fallback .item .image .underlay {
+  display: block;
+}
+
+/* line 57, ../sass/partials/_flipper.scss */
+.item .image .underlay {
+  display: block;
+  height: 250px;
+  background: none;
+  -webkit-transition-duration: .17s;
+  -o-transition-duration: .17s;
+  -moz-transition-duration: .17s;
+  transition-duration: .17s;
+}
+
+/* line 67, ../sass/partials/_flipper.scss */
+.item .image .overlay,
+.item .image .overlay div {
+  position: relative;
+  width: 250px;
+  height: 160px;
+  background: url(tiago-hoisel.png);
+  background-size: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: top center;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: center;
+}
+
+/* line 79, ../sass/partials/_flipper.scss */
+.item .image .overlay span,
+.item .image .overlay div span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* line 88, ../sass/partials/_flipper.scss */
+.item .image .overlay {
+  z-index: 100;
+  -webkit-border-radius: 4px 4px 0 0;
+}
+
+/* line 92, ../sass/partials/_flipper.scss */
+.item .image .overlay span {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 4px 4px 0 0;
+}
+
+/* line 96, ../sass/partials/_flipper.scss */
+.item .image .overlay div {
+  height: 27px;
+  background-position: 0 -169px;
+  -webkit-transform: translate3d(0, 169px, 0);
+}
+
+/* line 101, ../sass/partials/_flipper.scss */
+.item .image .overlay div span {
+  border-top: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 106, ../sass/partials/_flipper.scss */
+.item .image .overlay div div {
+  background-position: 0 -196px;
+  -webkit-transform: translate3d(0, 27px, 0);
+}
+
+/* line 110, ../sass/partials/_flipper.scss */
+.double .item .image .overlay div div span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* line 114, ../sass/partials/_flipper.scss */
+.item .image .overlay div div div {
+  background-position: 0 -223px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* line 118, ../sass/partials/_flipper.scss */
+.item .image .overlay div div div span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* line 123, ../sass/partials/_flipper.scss */
+.item:hover .underlay,
+.item.hover .underlay {
+  height: 180px;
+}
+
+/* line 127, ../sass/partials/_flipper.scss */
+.item:hover .overlay div,
+.item.hover .overlay div {
+  -webkit-transform: translate3d(0, 169px, 0) rotate3d(1, 0, 0, 65deg);
+}
+
+/* line 131, ../sass/partials/_flipper.scss */
+.item:hover .overlay div span,
+.item.hover .overlay div span {
+  border-left-color: rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 136, ../sass/partials/_flipper.scss */
+.item:hover .overlay div div,
+.item.hover .overlay div div {
+  -webkit-transform: translate3d(0, 26px, 0) rotate3d(1, 0, 0, -130deg);
+}
+
+/* line 140, ../sass/partials/_flipper.scss */
+.item:hover .overlay div div span,
+.item.hover .overlay div div span {
+  background: rgba(0, 0, 0, 0.5);
+  border-left-color: rgba(255, 255, 255, 0.1);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 -1px 0 rgba(255, 255, 255, 0.15), inset 0 -5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 -1px 0 rgba(255, 255, 255, 0.15), inset 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* line 149, ../sass/partials/_flipper.scss */
+.item:hover .overlay div div div,
+.item.hover .overlay div div div {
+  -webkit-transform: translate3d(0, 26px, 0) rotate3d(1, 0, 0, 130deg);
+}
+
+/* line 153, ../sass/partials/_flipper.scss */
+.item:hover .overlay div div div span,
+.item.hover .overlay div div div span {
+  background: none;
+  border-left-color: rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), inset 0 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), inset 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* line 161, ../sass/partials/_flipper.scss */
+.fallback .item:hover .image,
+.fallback .item.hover .image {
+  height: 119px;
+}
+
+/* line 165, ../sass/partials/_flipper.scss */
+.fallback .item:hover .image .placeholder,
+.fallback .item.hover .image .placeholder {
+  height: 119px;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 173, ../sass/partials/_flipper.scss */
+.shotStats {
+  float: right;
+  width: 140px;
+}
+/* line 176, ../sass/partials/_flipper.scss */
+.shotStats span.name {
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  font-size: 80%;
+  padding: 4px 0 0 5px;
+  width: 100%;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 188, ../sass/partials/_flipper.scss */
+.shotStats span.name a {
+  color: #fff;
+}
+/* line 190, ../sass/partials/_flipper.scss */
+.shotStats span.name a:hover {
+  color: #68A4F5;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+/* line 197, ../sass/partials/_flipper.scss */
+.shotStats span.likes {
+  color: #fff;
+  float: right;
+  font-size: 70%;
+  padding: 4px 0 0 5px;
+  width: 100%;
+  text-align: right;
+}
+
 /* =====================
 app styles
 ======================*/
@@ -6828,18 +7082,23 @@ body {
   background-repeat: no-repeat, repeat;
 }
 
-/* line 33, ../sass/app.scss */
-.wrap {
-  width: 833.333px;
-  margin: auto;
+/* line 34, ../sass/app.scss */
+a {
+  text-decoration: none;
 }
 
 /* line 38, ../sass/app.scss */
+.wrap {
+  width: 833.33333px;
+  margin: auto;
+}
+
+/* line 43, ../sass/app.scss */
 .head {
-  padding: 41.667px 0;
+  padding: 41.66667px 0;
   overflow: hidden;
 }
-/* line 41, ../sass/app.scss */
+/* line 46, ../sass/app.scss */
 .head .logo {
   background: url(img/logob.png) no-repeat;
   width: 100px;
@@ -6856,7 +7115,7 @@ body {
   -webkit-animation-fill-mode: both;
   background-size: 100%;
 }
-/* line 53, ../sass/app.scss */
+/* line 58, ../sass/app.scss */
 .head .loggedIn {
   float: right;
   width: 40%;
@@ -6868,7 +7127,7 @@ body {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 59, ../sass/app.scss */
+/* line 64, ../sass/app.scss */
 .head .loggedIn .avatar {
   height: 30px;
   border-radius: 3px;
@@ -6878,21 +7137,21 @@ body {
   box-shadow: inset 0 1px 0 white;
   margin-left: 5px;
 }
-/* line 66, ../sass/app.scss */
+/* line 71, ../sass/app.scss */
 .head .loggedIn .name {
   text-align: right;
   color: #fff;
   font-weight: 700;
   font-size: 80%;
 }
-/* line 72, ../sass/app.scss */
+/* line 77, ../sass/app.scss */
 .head .loggedIn .stats {
   text-align: right;
   color: #ccc;
   font-size: 70%;
 }
 
-/* line 81, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 .pics ul {
   -webkit-animation: fadeInUp 1s ease-in;
   -moz-animation: fadeInUp 1s ease-in;
@@ -6900,21 +7159,21 @@ body {
   -o-animation: fadeInUp 1s ease-in;
   animation: fadeInUp 1s ease-in;
 }
-/* line 83, ../sass/app.scss */
+/* line 89, ../sass/app.scss */
 .pics ul li {
   -webkit-transform: rotate3d(0, 0, 0, 0);
   width: 250px;
-  height: 305.556px;
+  margin-bottom: 41.66667px;
   float: left;
-  padding-right: 41.667px;
+  padding-right: 40.66667px;
   position: relative;
 }
-/* line 90, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .pics ul li.animate {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
-/* line 94, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .pics ul li.fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -6922,7 +7181,7 @@ body {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-/* line 97, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 .pics ul li.bounceIn {
   -webkit-animation-name: bounceIn;
   -moz-animation-name: bounceIn;
@@ -6930,103 +7189,16 @@ body {
   -o-animation-name: bounceIn;
   animation-name: bounceIn;
 }
-/* line 100, ../sass/app.scss */
+/* line 107, ../sass/app.scss */
 .pics ul li:nth-child(3n+3) {
   padding-right: 0;
 }
-/* line 103, ../sass/app.scss */
-.pics ul li .highlight {
+/* line 110, ../sass/app.scss */
+.pics ul li .picture {
   position: relative;
-}
-/* line 106, ../sass/app.scss */
-.pics ul li .highlight img {
-  width: 250px;
-  height: 250px;
-  border-radius: 1px;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-/* line 115, ../sass/app.scss */
-.pics ul li .highlight img + a {
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5);
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  top: 0;
-  left: 0;
-  z-index: 6;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-/* line 124, ../sass/app.scss */
-.pics ul li .highlight img + a.reveal {
-  top: 45px;
-}
-/* line 128, ../sass/app.scss */
-.pics ul li .highlight img.reveal {
-  top: 45px;
-}
-/* line 136, ../sass/app.scss */
-.pics .user {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  padding: 10px 0;
-  width: 250px;
-}
-/* line 144, ../sass/app.scss */
-.pics .user img {
-  height: 25px;
-  border-radius: 3px;
-  float: left;
-  -webkit-box-shadow: inset 0 1px 0 white;
-  -moz-box-shadow: inset 0 1px 0 white;
-  box-shadow: inset 0 1px 0 white;
-}
-/* line 150, ../sass/app.scss */
-.pics .user span.name {
-  color: #fff;
-  font-weight: bold;
-  float: left;
-  font-size: 80%;
-  padding: 4px 0 0 5px;
-}
-/* line 158, ../sass/app.scss */
-.pics .user .like {
-  width: 25px;
-  height: 24px;
-  background: url(img/heart.png) center top no-repeat;
-  float: right;
-  display: inline-block;
-  cursor: pointer;
-}
-/* line 165, ../sass/app.scss */
-.pics .user .like:hover {
-  background: url(img/heart.png) center bottom no-repeat;
-}
-/* line 169, ../sass/app.scss */
-.pics .user .heartAni {
-  width: 25px;
-  height: 24px;
-  background-image: url(img/heartLrg.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: absolute;
 }
 
-/* line 185, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .footer {
   width: 100%;
   overflow: hidden;
@@ -7036,7 +7208,7 @@ body {
   -o-animation: fadeInUp 1.5s ease-in;
   animation: fadeInUp 1.5s ease-in;
 }
-/* line 189, ../sass/app.scss */
+/* line 122, ../sass/app.scss */
 .footer .more {
   border: 1px solid #1b191c;
   font-weight: 700;
@@ -7058,7 +7230,7 @@ body {
   margin-left: -30px;
   text-decoration: none;
 }
-/* line 208, ../sass/app.scss */
+/* line 141, ../sass/app.scss */
 .footer .more:hover {
   border-color: #999;
   background: -webkit-linear-gradient(top, white, #e0e0e0);
@@ -7067,7 +7239,7 @@ body {
   color: #46424a;
   text-shadow: 0 1px 1px white;
 }
-/* line 217, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 .footer .settings {
   text-indent: -9999px;
   background: url(img/settings.png) no-repeat;
@@ -7082,7 +7254,7 @@ body {
   -o-transition: all 0.25s 4ms both ease-in-out;
   transition: all 0.25s 4ms both ease-in-out;
 }
-/* line 226, ../sass/app.scss */
+/* line 159, ../sass/app.scss */
 .footer .settings:hover {
   opacity: .5;
 }
